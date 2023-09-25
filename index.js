@@ -159,17 +159,18 @@ let playerTurn = true;
                 case 0:
                     pokemon2._currentHealth -= pokemon1._actions[action]._resource;
                     pokemon1._stamina -= pokemon1._actions[action]._cost;
-                    console.log(`${pokemon1._name} ha usado ${pokemon1._actions[action]._name}!!`);
+                    console.log(`${pokemon1._name} attacked ${pokemon2._name}!!. He dealt ${pokemon1._actions[action]._resource} damage!!`);
                     
                 break;
                 case 1:
+                    
                     pokemon1._currentHealth += pokemon1._actions[action]._resource;
                     pokemon1._stamina -= pokemon1._actions[action]._cost;
-                    console.log(`${pokemon1._name} se ha recuperado ${pokemon1._actions[action]._resource} puntos de vida!!`);
+                    console.log(`${pokemon1._name} replenished ${pokemon1._actions[action]._resource} health points!!`);
                 break;
                 case 2:
                     pokemon1._stamina += pokemon1._actions[action]._resource;
-                    console.log(`${pokemon1._name} ha descansado y recupero ${pokemon1._actions[action]._resource} puntos de stamina`);
+                    console.log(`${pokemon1._name} stopped to catch it's breath, he restored ${pokemon1._actions[action]._resource} stamina points`);
                 break;
                 }
             playerTurn = false;
@@ -199,4 +200,3 @@ let playerTurn = true;
     let winner = pokemon1._health * pokemon1._stamina <= 0 ? pokemon2 : pokemon1;
     console.log(`El ganador es: ${winner._name}`);
 }
-//okas?
