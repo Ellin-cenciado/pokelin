@@ -199,3 +199,4 @@ let playerTurn = true;
     let winner = pokemon1._health * pokemon1._stamina <= 0 ? pokemon2 : pokemon1;
     console.log(`El ganador es: ${winner._name}`);
 }
+//okas?
